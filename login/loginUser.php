@@ -131,12 +131,12 @@ if (is_post()) {
         <div class="demo-card">
           <strong>Salesperson</strong><br>
           Email: john@seafood.com<br>
-          Password: password123
+          Password: Password@123
         </div>
         <div class="demo-card">
           <strong>Admin</strong><br>
           Email: admin@seafood.com<br>
-          Password: admin123
+          Password: Password@123
         </div>
       </div>
   </div>
