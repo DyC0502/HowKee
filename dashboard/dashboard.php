@@ -10,7 +10,13 @@ $selectedTab = $_GET['tab'] ?? 'newOrder';
 $contentFile = $tabs[$selectedTab] ?? $tabs["newOrder"];
 ?>
 
-<link rel="stylesheet" href="/dashboard/dashboard.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/dashboard/dashboard.css">
+  </head>
 
 <main>
     <div class="main-container">

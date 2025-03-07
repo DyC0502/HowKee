@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="/dashboard/SalesContent/orderHistory.css">
   <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
-<!DOCTYPE html>
-<html lang="en">
 
 <body>
     <div class="card animate-fade-in">

@@ -17,7 +17,13 @@ $selectedTab = $_GET['tab'] ?? 'adminOverview';
 $contentFile = $tabs[$selectedTab] ?? $tabs["adminOverview"];
 ?>
 
-<link rel="stylesheet" href="/adminDashboard/adminDashboard.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/adminDashboard/adminDashboard.css">
+</head>
 
 <main>
     <div class="main-container">
@@ -52,7 +58,7 @@ $contentFile = $tabs[$selectedTab] ?? $tabs["adminOverview"];
         </div>
     </div>
 </main>
-
+</html>
 <?php
 include '../_foot.php';
 ?>
