@@ -1,83 +1,58 @@
 <?php
 include '../_headAdmin.php';
 
+// Define available tabs and their corresponding content files
+$tabs = [
+    "adminOverview" => "../adminDashboard/adminContent/adminOverview.php",
+    "orderManagement" => "../adminDashboard/adminContent/orderManagement.php",
+    "clients" => "../adminDashboard/adminContent/clients.php",
+    "inventory" => "../adminDashboard/adminContent/inventory.php",
+    "settings" => "../adminDashboard/adminContent/settings.php",
+];
+
+// Get the selected tab from the URL (default to 'adminOverview' if none is selected)
+$selectedTab = $_GET['tab'] ?? 'adminOverview';
+
+// Ensure the selected tab exists; if not, default to 'adminOverview'
+$contentFile = $tabs[$selectedTab] ?? $tabs["adminOverview"];
 ?>
+
 <link rel="stylesheet" href="/adminDashboard/adminDashboard.css">
 
 <main>
-<div class="main-container">
-<div class="navigation">
-      <div class="tabs-list">
-        <button class="tab" data-tab="adminOverview">
-          <i class="fa-solid fa-chart-bar"></i>
-          <span>Overview</span>
-        </button>
-        <button class="tab" data-tab="orderManagement">
-          <i class="fa-solid fa-shopping-bag"></i>
-          <span>Orders</span>
-        </button>
-        <button class="tab" data-tab="clients">
-          <i class="fa-solid fa-users"></i>
-          <span>Clients</span>
-        </button>
-        <button class="tab" data-tab="inventory">
-          <i class="fa-solid fa-layer-group"></i>
-          <span>Inventory</span>
-        </button>
-        <button class="tab" data-tab="settings">
-          <i class="fa-solid fa-cog"></i>
-          <span>Settings</span>
-        </button>
-      </div>
-      </div>
-      <!-- Dynamic Content Section -->
-    <div id="content-container">
-      <?php include '../adminDashboard/adminContent/adminOverview.php'; ?>  <!-- Default Content -->
+    <div class="main-container">
+        <div class="navigation">
+            <div class="tabs-list">
+                <a href="?tab=adminOverview" class="tab <?= $selectedTab == 'adminOverview' ? 'active' : '' ?>">
+                    <i class="fa-solid fa-chart-bar"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="?tab=orderManagement" class="tab <?= $selectedTab == 'orderManagement' ? 'active' : '' ?>">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="?tab=clients" class="tab <?= $selectedTab == 'clients' ? 'active' : '' ?>">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+                </a>
+                <a href="?tab=inventory" class="tab <?= $selectedTab == 'inventory' ? 'active' : '' ?>">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Inventory</span>
+                </a>
+                <a href="?tab=settings" class="tab <?= $selectedTab == 'settings' ? 'active' : '' ?>">
+                    <i class="fa-solid fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Dynamic Content Section -->
+        <div id="content-container">
+            <?php include $contentFile; ?>
+        </div>
     </div>
-
 </main>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const tabs = document.querySelectorAll(".tab");
-    const contentContainer = document.getElementById("content-container");
-
-    // Function to load content dynamically
-    function loadContent(page) {
-        fetch(page)
-            .then(response => response.text())
-            .then(data => {
-                contentContainer.innerHTML = data;
-            })
-            .catch(error => console.error("Error loading page:", error));
-    }
-
-    // Function to set active tab
-    function setActiveTab(selectedTab) {
-        tabs.forEach(tab => tab.classList.remove("active")); // Remove active from all tabs
-        selectedTab.classList.add("active"); // Add active to the selected tab
-    }
-
-    // Set default active tab and load content
-    const defaultTab = document.querySelector('.tab[data-tab="adminOverview"]');
-    if (defaultTab) {
-        setActiveTab(defaultTab);
-        loadContent("../adminDashboard/adminContent/adminOverview.php");
-    }
-
-    // Event listener for tabs
-    tabs.forEach(tab => {
-        tab.addEventListener("click", function() {
-            const page = "../adminDashboard/adminContent/" + this.getAttribute("data-tab") + ".php";
-            setActiveTab(this);
-            loadContent(page);
-        });
-    });
-});
-
-</script>
 
 <?php
 include '../_foot.php';
-
 ?>

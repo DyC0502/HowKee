@@ -15,7 +15,9 @@
   padding: 1px;
   border-radius: 10px;
 }
-
+.tabs-list a {
+  text-decoration: none ;
+}
 /* Individual Tab */
 .tab {
   width: 100%;
