@@ -1,0 +1,158 @@
+/* Background and Layout */
+body {
+  background: linear-gradient(to bottom, #fef2f2, #fee2e2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+/* Centered Container */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-item{
+  text-align: center;
+}
+
+/* Login Box */
+.login-box {
+  background: white;
+  border-radius: 12px;
+  width: 420px;
+  padding: 5px 30px 30px 30px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(227, 153, 153, 0.1);
+}
+
+/* Logo Section */
+.logo-section img {
+  width: 70px;
+}
+
+.logo-section h2 {
+  color: #ea384c;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.logo-section p {
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Headings */
+.welcome-text {
+  color: #ea384c;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.subtitle {
+
+  color: #777;
+  font-size: 14px;
+}
+
+/* Input Fields */
+.input-group {
+  margin-top: 20px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #ea384c;
+  box-shadow: 0 0 5px rgba(215, 38, 61, 0.3);
+}
+
+/* Error Messages */
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  background: #ea384c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.login-btn:hover {
+  background: #d7263d;
+}
+
+/* Demo Credentials */
+.demo-credentials {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #444;
+  font-size: 14px;
+}
+
+/* Demo Credentials */
+.demo-credentials {
+  margin-top: 30px;
+  font-weight: bold;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.demo-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.demo-card {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  width: 48%;
+  text-align: center;
+  color: #b0b0b0;
+  line-height: 22px;
+
+}
+
+.demo-card strong {
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+
+/* Register Text */
+.register-text {
+  margin-top: 12px;
+}

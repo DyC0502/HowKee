@@ -1,0 +1,101 @@
+
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header Styles */
+.card-header {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-header i {
+  margin-right: 8px;
+}
+
+/* Content */
+.card-content h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.card-content i {
+  margin-right: 5px;
+}
+
+/* Background Gradients */
+.blue-gradient { background: linear-gradient(to bottom right, #ebf8ff, #bee3f8); }
+.green-gradient { background: linear-gradient(to bottom right, #f0fdf4, #a7f3d0); }
+.purple-gradient { background: linear-gradient(to bottom right, #f3e8ff, #d8b4fe); }
+.amber-gradient { background: linear-gradient(to bottom right, #fffbeb, #fcd34d); }
+
+/* Chart Placeholder */
+.chart-placeholder, .activity-placeholder, .scroll-container {
+  height: 200px;
+  background: #eee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* Full-width cards */
+.full-width {
+  grid-column: span 2;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}

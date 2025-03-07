@@ -1,0 +1,132 @@
+
+
+.order-management {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.header-title {
+  max-width: 60%;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.header-title h2 {
+  margin-bottom: 5px;
+}
+
+.sub-text {
+  color: #777;
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters input, .filters select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#orderList {
+  max-height: 1000px;
+  overflow-y: scroll;
+}
+
+.order-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.order-card:hover {
+  border-color: #007bff;
+  background: #f0f8ff;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items:start;
+  font-size: 14px;
+  padding-bottom: 10px;
+  text-align: left;
+  line-height: 10px;
+  padding: 0px 10px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+}
+
+.status-submitted { background: #ffcc00; }
+.status-processing { background: #007bff; }
+.status-completed { background: #28a745; }
+.status-cancelled { background: #dc3545; }
+
+.order-details {
+  font-size: 14px;
+  text-align: left;
+  margin: 10px 0;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  line-height: 10px;
+  padding: 0px 10px;
+
+}
+.items {
+  margin: 0px 10px;
+  border-bottom: 1px solid lightgray;
+  min-height: 150px;
+}
+.items h4 {
+  text-align: left;
+  margin-bottom: 0px;
+}
+.items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 0px 10px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
