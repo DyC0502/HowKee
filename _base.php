@@ -119,31 +119,31 @@ $_foot  = '';
 
 
 
-$db = new PDO('mysql:host=localhost;dbname=howkee', 'root', '', [
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
- ]);
+// $db = new PDO('mysql:host=localhost;dbname=howkee', 'root', '', [
+//     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+//  ]);
 
 
-// $server = 'localhost';
-// $username = 'u515171008_howKee';
-// $password = 'fAf32*7(*hffle12';
-// $dbname = 'u515171008_howKee';
+$server = 'localhost';
+$username = 'u515171008_howKee';
+$password = 'fAf32*7(*hffle12';
+$dbname = 'u515171008_howKee';
 
-// // MySQLi Connection with error checking
-// $db = mysqli_connect($server, $username, $password, $dbname);
+// MySQLi Connection with error checking
+$db = mysqli_connect($server, $username, $password, $dbname);
 
-// if (!$db) {
-//     die("MySQLi Connection failed: " . mysqli_connect_error());
-// }
+if (!$db) {
+    die("MySQLi Connection failed: " . mysqli_connect_error());
+}
 
-// try {
-//     $db = new PDO("mysql:host=$server;dbname=$dbname", $username, $password, [
-//         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-//         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Enables error reporting
-//     ]);
-// } catch (PDOException $e) {
-//     die("PDO Connection failed: " . $e->getMessage());
-// }
+try {
+    $db = new PDO("mysql:host=$server;dbname=$dbname", $username, $password, [
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Enables error reporting
+    ]);
+} catch (PDOException $e) {
+    die("PDO Connection failed: " . $e->getMessage());
+}
 
 
 
