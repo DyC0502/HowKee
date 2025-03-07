@@ -19,7 +19,7 @@ include '../_head.php';
         </button>
         <button class="tab" data-tab="salesReport">
           <i class="fa-solid fa-users"></i>
-          <span>Monthly Report</span>
+          <span>Monthly fdsReport</span>
         </button>
       </div>
       </div>
